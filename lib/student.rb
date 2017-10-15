@@ -46,7 +46,7 @@ class Student
     SQL
 
     DB[:conn].execute(sql, @name, @grade)
-
+    new_student.id = DB[:conn].execute(sql)
   def save
     if self.id
       self.update
