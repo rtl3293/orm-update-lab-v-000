@@ -28,8 +28,11 @@ class Student
     DB[:conn].execute(sql)
   end
 
-  def find_by_name(name)
+  def self.new_from_db(row)
+    self.new(row[0], row[1])
 
+  def find_by_name(name)
+    Stud
   end
 
   def self.create(name, grade)
@@ -58,7 +61,7 @@ class Student
     end
 
     def update
-
+      student =
     end
   end
 
