@@ -70,7 +70,7 @@ class Student
 
   def update
     sql = <<-SQL
-      UPDATE
+      UPDATE students
       SET (name = ?, grade = ?)
       WHERE id = ?
     SQL
