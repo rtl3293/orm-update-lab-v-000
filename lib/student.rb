@@ -43,6 +43,8 @@ class Student
       sql = <<-SQL
         SELECT insert_last_rowid FROM students
       SQL
+
+      DB[:conn].execute(sql)
     end
   end
 
