@@ -17,5 +17,7 @@ class Student
         name TEXT,
         grade INTEGER)
     SQL
+
+    DB.execute
   end
 end
