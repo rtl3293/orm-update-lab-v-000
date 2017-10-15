@@ -38,7 +38,7 @@ class Student
     WHERE name = ?
     SQL
 
-    DB[:conn].execute(sql, name).first
+    student = DB[:conn].execute(sql, name).first
   end
 
   def self.create(name, grade)
