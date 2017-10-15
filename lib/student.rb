@@ -29,6 +29,8 @@ class Student
     DB[:conn].execute(sql)
   end
 
+  def find_by_name(name)
+
   def save
     if self.id
       self.update
