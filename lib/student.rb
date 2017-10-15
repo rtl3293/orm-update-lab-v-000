@@ -47,7 +47,7 @@ class Student
     sql = <<-SQL
       SELECT last_insert_rowid() FROM students
     SQL
-    new_student.id = DB[:conn].execute(sql)
+    new_student.id = DB[:conn].execute(sql)[0][0]
     #@id = DB[:conn].execute(sql)[0][0]
   end
   def save
