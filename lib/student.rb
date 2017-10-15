@@ -50,6 +50,7 @@ class Student
     SQL
 
     @id = DB[:conn].execute(sql)[0][0]
+  end
   def save
     if self.id
       self.update
