@@ -29,7 +29,7 @@ class Student
   end
 
   def self.new_from_db(row)
-    self.new(row[0], row[1])
+    self.new(row[0], row[1], row[3])
 
   def find_by_name(name)
     Stud
