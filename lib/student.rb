@@ -74,6 +74,6 @@ class Student
       SET (name = ?, grade = ?)
       WHERE id = ?
     SQL
-    DB[:conn].execute(sql, @name, @grade)
+    DB[:conn].execute(sql, @name, @grade, @id)
   end
 end
