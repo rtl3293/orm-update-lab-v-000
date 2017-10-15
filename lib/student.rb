@@ -30,6 +30,15 @@ class Student
   end
 
   def find_by_name(name)
+    sql = <<-SQL
+      INSERT INTO students (name, grade)
+      VALUES (?,?)
+    SQL
+
+    DB[:conn].execute(sql, @name, @grade)
+  end
+
+  def self.create(name, grade)
 
   def save
     if self.id
