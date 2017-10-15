@@ -39,7 +39,7 @@ class Student
     SQL
 
     student = DB[:conn].execute(sql, name).first
-    self.new_from_db(student[0], student[1], student[2])
+    self.new_from_db(student])
   end
 
   def self.create(name, grade)
