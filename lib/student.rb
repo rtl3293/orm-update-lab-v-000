@@ -34,20 +34,9 @@ class Student
 
   def self.create(name, grade)
 
-    sql = <<-SQL
-      INSERT INTO students (name, grade)
-      VALUES (?,?)
-    SQL
-    #binding.pry
-    DB[:conn].execute(sql, name, grade)
-    new_student = Student.new(name, grade)
-
-    new_student.id = DB[:conn].execute(sql)
-
-    sql = <<-SQL
-      SELECT last_insert_rowid() FROM students
-    SQL
-    new_student.id = DB[:conn].execute(sql)[0][0]
+    song = Song.new(name, grade)
+    song.save
+    song
     #@id = DB[:conn].execute(sql)[0][0]
   end
   def save
