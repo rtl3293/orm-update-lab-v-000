@@ -38,7 +38,7 @@ class Student
       INSERT INTO students (name, grade)
       VALUES (?,?)
     SQL
-    binding.pry
+    #binding.pry
     DB[:conn].execute(sql, name, grade)
     new_student = Student.new(name, grade)
 
