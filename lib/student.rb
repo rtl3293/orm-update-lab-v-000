@@ -68,5 +68,10 @@ class Student
     end
   end
 
-
+  def update
+    sql = <<-SQL
+      UPDATE (name, grade)
+      VALUES (?, ?)
+    SQL
+  end
 end
