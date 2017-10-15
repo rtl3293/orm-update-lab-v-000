@@ -39,6 +39,13 @@ class Student
   end
 
   def self.create(name, grade)
+    new_student = Student.new(name, grade)
+    sql = <<-SQL
+      INSERT INTO students (name, grade)
+      VALUES (?,?)
+    SQL
+
+    DB[:conn].execute(sql, @name, @grade)
 
   def save
     if self.id
