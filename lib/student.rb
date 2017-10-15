@@ -64,7 +64,5 @@ class Student
 
   end
 
-  def update
-    #student =
-  end
+
 end
