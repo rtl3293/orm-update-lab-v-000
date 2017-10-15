@@ -71,7 +71,7 @@ class Student
   def update
     sql = <<-SQL
       UPDATE students
-      SET (name = ?, grade = ?)
+      SET name = ?, grade = ?
       WHERE id = ?
     SQL
     DB[:conn].execute(sql, @name, @grade, @id)
