@@ -42,7 +42,6 @@ class Student
 
       sql = <<-SQL
         SELECT insert_last_rowid FROM students
-        
       SQL
     end
   end
