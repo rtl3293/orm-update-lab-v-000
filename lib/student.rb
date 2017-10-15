@@ -73,6 +73,6 @@ class Student
       UPDATE (name, grade)
       VALUES (?, ?)
     SQL
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, @name, @grade)
   end
 end
