@@ -44,7 +44,7 @@ class Student
         SELECT insert_last_rowid FROM students
       SQL
 
-      DB[:conn].execute(sql)
+      DB[:conn].execute(sql)[0][0]
     end
   end
 
