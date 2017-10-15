@@ -46,6 +46,10 @@ class Student
 
       @id = DB[:conn].execute(sql)[0][0]
     end
+
+    def update
+
+    end
   end
 
 end
